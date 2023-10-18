@@ -5,12 +5,13 @@ import butcherPigImage from "./assets/butcherPig.jpeg"
 const App = () => {
   // ACTION ITEM: to make the development process easier there are some preassigned words in the input field, when you are ready for your full user experience delete the test words passed to useState and pass an empty string
   const [userInput, setUserInput] = useState(
-    "apple through queen squeal fry fluent"
+    "Who invented pig latin?"
   )
   const [inputTranslated, setInputTranslated] = useState("")
 
   // ACTION ITEM: the "myPigLatinCodeHere" function is where you will put your logic to translate the sentence entered by the user into Pig Latin
   const myPigLatinCodeHere = () => {
+
     // NO MODIFICATION NEEDED: the variable "arrayOfUserInput" will contain the text input from the user split into an array of words
     const arrayOfUserInput = userInput.split(" ")
     console.log("arrayOfUserInput:", arrayOfUserInput)
@@ -30,9 +31,18 @@ const App = () => {
         )
       })
       console.log("vowelsArray:", vowelsArray)
+      const checkVowel = (array) => {
+        return array.filter((value) => value.includes() vowel)
+      }
 
       // ACTION ITEM: your Pig Latin logic goes here!
-
+      // I need to see words beginning with a vowel translated to add "way" to the end.
+      //pseudo code: create a function named myPigLatinCodeHere
+      //create a iteration and a conditional that allows each word that starts with a vowel to end in "way" and the ones that dont end with "ay"
+      //use .filter to isolate the vowels out each word 
+      // possible methods to use .shift so it will remove the first element. 
+      //then add way so we would use .push method
+      //if eachWord starts with an vowel use the .push method  to add "way" 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
     })
@@ -47,7 +57,7 @@ const App = () => {
 
   // ACTION ITEM: this method restarts the game by setting the original state, when you are ready for your full user experience delete the test words in setUserInput and pass an empty string
   const restartGame = () => {
-    setUserInput("apple through queen squeal fry fluent")
+    setUserInput("Who invented pig latin?")
     setInputTranslated("")
   }
 
