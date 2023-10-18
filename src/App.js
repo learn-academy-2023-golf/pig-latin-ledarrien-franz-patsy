@@ -30,18 +30,15 @@ const App = () => {
       })
 
       console.log("vowelsArray:", vowelsArray)
-      const firstWord = arrayOfUserInput[0]
-      const firstLetter = firstWord[0]
-      if (firstLetter[0] === vowelsArray[0]) {
-        return 
+   
+      if(eachWord[0] === vowelsArray[0]){
+        return `${eachWord}way`
+      } else {
+        return eachWord
       }
-      
 
 
-      // const checkVowel = (eachWord) => {
-      //   return eachWord.filter((value) => value.indexOf(vowelsArray))
-      // }
-      // console.log(checkVowel(userInput))
+
 
       // ACTION ITEM: your Pig Latin logic goes here!
       // I need to see words beginning with a vowel translated to add "way" to the end.
