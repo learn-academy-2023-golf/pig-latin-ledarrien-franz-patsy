@@ -4,9 +4,7 @@ import butcherPigImage from "./assets/butcherPig.jpeg"
 
 const App = () => {
   // ACTION ITEM: to make the development process easier there are some preassigned words in the input field, when you are ready for your full user experience delete the test words passed to useState and pass an empty string
-  const [userInput, setUserInput] = useState(
-    "Who invented pig latin?"
-  )
+  const [userInput, setUserInput] = useState("")
   const [inputTranslated, setInputTranslated] = useState("")
 
   // ACTION ITEM: the "myPigLatinCodeHere" function is where you will put your logic to translate the sentence entered by the user into Pig Latin
@@ -30,14 +28,25 @@ const App = () => {
           vowel === "u"
         )
       })
+
       console.log("vowelsArray:", vowelsArray)
-      const checkVowel = (array) => {
-        return array.filter((value) => value.includes() vowel)
+      const firstWord = arrayOfUserInput[0]
+      const firstLetter = firstWord[0]
+      if (firstLetter[0] === vowelsArray[0]) {
+        return 
       }
+      
+
+
+      // const checkVowel = (eachWord) => {
+      //   return eachWord.filter((value) => value.indexOf(vowelsArray))
+      // }
+      // console.log(checkVowel(userInput))
 
       // ACTION ITEM: your Pig Latin logic goes here!
       // I need to see words beginning with a vowel translated to add "way" to the end.
-      //pseudo code: create a function named myPigLatinCodeHere
+
+      //Pseudo code: create a function named myPigLatinCodeHere
       //create a iteration and a conditional that allows each word that starts with a vowel to end in "way" and the ones that dont end with "ay"
       //use .filter to isolate the vowels out each word 
       // possible methods to use .shift so it will remove the first element. 
