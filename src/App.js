@@ -31,6 +31,10 @@ const App = () => {
 
       console.log("vowelsArray:", vowelsArray)
    
+          // ACTION ITEM: your Pig Latin logic goes here!
+      // I need to see words beginning with a vowel translated to add "way" to the end.
+      //Pseudo code: 
+      // - use condtional to check for vowels in the first index
       if(eachWord[0] === vowelsArray[0]){
         return `${eachWord}way`
       } else {
@@ -40,15 +44,7 @@ const App = () => {
 
 
 
-      // ACTION ITEM: your Pig Latin logic goes here!
-      // I need to see words beginning with a vowel translated to add "way" to the end.
-
-      //Pseudo code: create a function named myPigLatinCodeHere
-      //create a iteration and a conditional that allows each word that starts with a vowel to end in "way" and the ones that dont end with "ay"
-      //use .filter to isolate the vowels out each word 
-      // possible methods to use .shift so it will remove the first element. 
-      //then add way so we would use .push method
-      //if eachWord starts with an vowel use the .push method  to add "way" 
+  
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
     })
