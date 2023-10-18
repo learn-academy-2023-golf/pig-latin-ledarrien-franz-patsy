@@ -32,6 +32,15 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
+// - Can type any word that has a "qu" in the first syllable in the text input (e.g. squeal)
+if(eachWord.includes("qu")){
+  
+  return eachWord + "ay"
+}
+
+// - Can hit the submit button
+// - Can see the words that have a "qu" in the first syllable translated to Pig Latin and rendered to the page (e.g. ealsquay)
+
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
